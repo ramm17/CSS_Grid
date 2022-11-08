@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid and Media Queris</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+        @media only screen and (max-width:300px){
+            body{
+                background-color: red;
+            }
+
+            .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside '
+            'footer footer footer footer';
+            }
+
+            aside{
+                display: none;
+             }
+
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            body{
+                background-color: blue;
+            }
+            .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside '
+            'footer footer footer footer';
+            }
+            aside{
+                display: none;
+             }
+
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+
+        @media (min-width:500px) and (max-width:800px) {
+            body{
+                background-color: yellow;
+            }
+            .container{
+                 display: grid;
+                 grid-gap: 1rem;
+                 grid-template-areas: 
+                 'navbar navbar navbar navbar'
+                 'section section section section'
+                'aside aside aside aside '
+                 'footer footer footer footer';
+            }
+
+            span{
+                display: block;
+                text-align: center;
+            }
+        } 
+
+        @media (min-width:800px){
+            body{
+                background-color: green;
+            }
+        }
+
+        .bdr{
+            border: 2px solid black;
+            padding:10px 23px;
+            background-color: wheat;
+        }
+
+        nav{
+            grid-area: navbar;
+        }
+        section{
+            grid-area: section;
+        }
+        aside{ 
+            grid-area: aside;
+        }
+        footer{ 
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+             <section class="bdr">
+            <h2>Learn CSS in Hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto culpa, aliquam cumque iure laborum, qui repudiandae ea, explicabo vel error ducimus. Non at doloribus quibusdam repellendus optio dolor totam voluptate, quidem sequi quos ducimus, porro quis libero facilis recusandae praesentium. Similique quam, ea, voluptatem corporis iusto maiores odio possimus vel totam eius iure adipisci rem cum voluptate aliquid ipsa illo deleniti ipsum ut sed doloremque culpa consequuntur! Quia ullam id tenetur tempora aliquam, repellat dolor dolorum delectus possimus excepturi assumenda cupiditate, vitae quis totam atque adipisci exercitationem optio numquam sed modi culpa explicabo a nam rerum. Excepturi repellat alias sequi molestiae? Veniam facere hic ad placeat aspernatur officiis cumque eos, illo enim voluptates! Saepe provident accusantium quidem, labore perspiciatis rerum iusto minima voluptatum? Delectus dolores sunt itaque inventore placeat quasi optio molestias consequatur rem, nostrum animi labore accusantium excepturi voluptas ipsum. Animi iusto, dicta, mollitia totam voluptas exercitationem laudantium eaque quam sint delectus dignissimos molestiae consectetur corporis recusandae rem unde ipsum at cupiditate natus impedit? Molestiae quibusdam exercitationem officiis recusandae reprehenderit nesciunt fugiat provident impedit! Dolore numquam magni, illo unde nisi asperiores eligendi deleniti voluptas laborum eveniet voluptatum, porro cum amet reiciendis consequatur. Sit eius, quas voluptatem accusantium aperiam praesentium!</p>
+            </section>
+            <aside class="bdr">
+            <h1>More about us</h1>
+            </aside>       
+    </div>
+    <footer class="bdr">Copyright CodeWithHarry 2020</footer>
+</body>
+</html>
